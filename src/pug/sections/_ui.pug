@@ -1,0 +1,25 @@
+mixin pageBtn(tag, text, addClass, link)
+	if tag =='a'
+		#{tag}.page-btn(class=" "+addClass href = link) #{text}
+	else
+		#{tag}.page-btn(class=" "+addClass) #{text}
+
+// contact item
+mixin contactBlock(items)
+	nav.contacts-list
+		each item in items
+			if item.link
+				a(href=" "+item.link).contact-list__item
+					span.contact-list__icon
+						i(class=" "+ item.iconClass)
+					span #{item.text}
+			else
+				.contact-list__item
+					span.contact-list__icon
+						i(class=" "+ item.iconClass)
+					span #{item.text}
+.container
+	.page-button
+		+pageBtn('button', 'Заказать звонок', '')
+	+contactBlock([{link: "#", text:'+7(999)999-99-99', iconClass: 'fas fa-phone-alt'}])
+	+contactBlock([{link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])

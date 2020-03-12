@@ -1,0 +1,22 @@
+//benefits cards
+mixin benefitCard(imgSrc, title, text)
+	.benefit-card
+		.card-icon
+			object(id=""+ imgSrc data="img/svg/"+ imgSrc +".svg", type="")
+		.card-text
+			p #{title}
+			p #{text}
+
+section.benefit-cards
+	.container
+		.title-2.text-center
+			h2 Не тратьте время на поиск подходящего перевозчика
+		.benefit-cards-wrapper
+			.row
+				.col-lg-4
+					+benefitCard('icon1', 'Расчёт ставки от 10 мин', 'Подача авто от 30 мин.')
+				.col-lg-4
+					+benefitCard('icon2', 'Любая форма оплаты', 'НДС - Без НДС - Наличная')
+				.col-lg-4
+					+benefitCard('icon3', 'Сложные маршруты', 'Любое место, где есть дорога')
+					

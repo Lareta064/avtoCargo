@@ -115,17 +115,26 @@ input {
 	color: @text;
 	font-size: 16px;
 	padding-top: 3px;
-	padding-bottom: 3px;
+	padding-bottom: 0px;
 
 	// margin-bottom: 14px;
 	display: flex;
 	-webkit-align-items: center;
 	align-items: center;
+
+	@media(min-width:1200px) {
+		font-size: 18px;
+		padding-bottom: 3px;
+	}
 }
 
 .contact-list__item:first-child {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
+
+	@media(min-width:768px) {
+		font-size: 18px;
+	}
 }
 
 a.contact-list__item {
@@ -138,7 +147,7 @@ a.contact-list__item:hover {
 }
 
 .contact-list__icon {
-	font-size: 18px;
+	font-size: 16px;
 	color: @orange;
 	display: inline-block;
 	width: 16px;
@@ -148,4 +157,5 @@ a.contact-list__item:hover {
 	-webkit-align-items: center;
 	align-items: center;
 	margin-right: 9px;
+
 }

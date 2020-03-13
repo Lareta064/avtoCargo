@@ -1,4 +1,6 @@
+
 $(document).ready(function () {
+
   //анимация svg
   const icon1 = new Vivus('icon1', {
     duration: 300
@@ -64,16 +66,26 @@ $(document).ready(function () {
 
   /*показать часть формы*/
   const showFormBtn = document.querySelectorAll('.show-fields');
+  //const showFormBtnMobile = document.querySelectorAll('.show-fields--mob');
+  //const showFormBtnDesktop = document.querySelectorAll('.show-fields--desk');
   const formPart = document.querySelector('#form-part');
 
   for (let i = 0; i < showFormBtn.length; i++) {
     showFormBtn[i].addEventListener('click', function () {
+      for (item of showFormBtn) {
+        item.classList.add('hide');
+      }
       formPart.classList.remove('hide');
-      this.classList.add('hide');
+
     });
   }
 
   /* при ресайзе экарна */
-  window.addEventListener('resize', function () { })
+  const RESIZE_SETPOINT = 768;
+  let prevWidth = window.innerWidth;
+  let setpointTriggered = false;
+
+  window.addEventListener('resize', function () {
+  })
 
 })

@@ -1,14 +1,14 @@
 $(document).ready(function () {
   //анимация svg
-  const icon1 = new Vivus('icon1', {
-    duration: 300
-  });
-  const icon2 = new Vivus('icon2', {
-    duration: 200
-  });
-  const icon3 = new Vivus('icon3', {
-    duration: 200
-  });
+  // const icon1 = new Vivus('icon1', {
+  //   duration: 300
+  // });
+  // const icon2 = new Vivus('icon2', {
+  //   duration: 200
+  // });
+  // const icon3 = new Vivus('icon3', {
+  //   duration: 200
+  // });
 
   /*выбор селекта в форме*/
   const selectBlock = document.querySelectorAll('.select-block')

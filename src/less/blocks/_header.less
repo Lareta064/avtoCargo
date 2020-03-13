@@ -6,6 +6,13 @@
 	z-index: 20;
 }
 
+.logo {
+	@media(max-width:768px) {
+		max-width: 75px;
+		margin-right: 7px;
+	}
+}
+
 .header--main {
 	margin-bottom: 80px;
 }
@@ -108,18 +115,18 @@
 }
 
 /* Контакты в шапке*/
-.header .contacts {
-	display: none;
 
-	@media(min-width:580px) {
-		display: block;
-	}
-}
 
 .header .contacts-list {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@media(max-width:580px) {
+		i {
+			display: none;
+		}
+	}
 }
 
 /* BUTTON CALL*/

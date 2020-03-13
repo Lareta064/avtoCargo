@@ -55,6 +55,27 @@ input {
 	outline: none;
 }
 
+.breadcrumb-item+.breadcrumb-item::before {
+	content: '|'
+}
+
+.breadcrumbs {
+	margin-bottom: 50px;
+
+	.breadcrumb-item {
+		font-size: 12px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+
+
+}
+
+.breadcrumbs .breadcrumb-item:last-child {
+	color: #9D9D9D;
+	cursor: default;
+}
+
 .title-2 h2 {
 	font-size: 24px;
 	font-weight: 700;

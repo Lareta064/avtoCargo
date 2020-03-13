@@ -30,11 +30,11 @@ mixin header(addClass)
 					span toggle menu
 				.header-nav
 					ul
-						li(href="#")
-							a(href="#") О компании
-						li(href="#")
+						li
+							a(href="about.html") О компании
+						li
 							a(href="#") Виды грузоперевозок
-						li(href="#")
+						li
 							a(href="#") Рассчитать стоимость
 				
 				.contacts
@@ -61,3 +61,8 @@ mixin contactBlock(items)
 					span.contact-list__icon
 						i(class=" "+ item.iconClass)
 					span #{item.text}
+
+mixin breadcrm(items)
+	.breadcrumbs
+		each item in items
+			a(href="#").breadcrumb-item #{item}

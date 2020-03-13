@@ -1,5 +1,5 @@
 mixin navigation(dataObj)
-	.nav-content
+	.nav-content&attributes(attributes)
 		.logo
 			a(href="#")
 				img(src="img/logo.png", alt="logo")
@@ -22,7 +22,7 @@ mixin navigation(dataObj)
 mixin header(addClass)
 	.header(class=" "+ addClass)
 		.container
-			.header-content
+			.navigation-content
 				.logo
 					a(href="#")
 						img(src="img/logo.png", alt="logo")
@@ -52,7 +52,7 @@ mixin contactBlock(items)
 	nav.contacts-list
 		each item in items
 			if item.link
-				a(href=" "+item.link).contact-list__item
+				a(href=" "+item.link).contact-list__item.contact-phone
 					span.contact-list__icon
 						i(class=" "+ item.iconClass)
 					span #{item.text}

@@ -1,0 +1,39 @@
+.aboutus {
+	padding-bottom: 40px;
+
+	h2 {
+		margin-bottom: 30px;
+	}
+}
+
+.about-text {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+
+	img {
+		max-width: 40%;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		display: none;
+
+		@media(max-width: 1200px) {
+			display: block;
+		}
+
+		@media(max-width: 767px) {
+			display: none;
+		}
+	}
+
+	@media(max-width: 767px) {
+		margin-bottom: 16px;
+	}
+}
+
+.about-img {
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}

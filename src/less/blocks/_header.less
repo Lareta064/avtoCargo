@@ -4,6 +4,7 @@
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	position: relative;
 	z-index: 20;
+	margin-bottom: 24px;
 }
 
 .logo {
@@ -17,7 +18,7 @@
 	margin-bottom: 80px;
 }
 
-.header-content {
+.navigation-content {
 	display: flex;
 	-webkit-align-items: center;
 	align-items: center;
@@ -92,6 +93,8 @@
 
 }
 
+.footer-nav .calc-btn a:after,
+.footer-nav ul a:after,
 .header-nav ul a:after {
 	content: '';
 	left: 0;
@@ -99,10 +102,12 @@
 	position: absolute;
 	bottom: -2px;
 	height: 1px;
-	background-color: @link;
+	background-color: rgba(47, 65, 186, .7);
 	transition: .5s;
 }
 
+.footer-nav .calc-btn a:hover:after,
+.footer-nav ul a:hover:after,
 .header-nav ul a:hover:after {
 	width: 100%;
 }

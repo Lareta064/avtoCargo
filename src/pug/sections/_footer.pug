@@ -1,0 +1,36 @@
+footer.footer
+	.footer-top
+		.container
+			.navigation-content
+				.row
+					.col-4.col-md-2
+						.logo
+							a(href="#")
+								img(src="img/logo2.png", alt="logo")
+								//- button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
+								//- 	span toggle menu
+					.d-none.d-md-block.col-md-3.col-xl-2.offset-xl-1
+						.footer-nav
+							ul
+								li(href="#")
+									a(href="#") О компании
+								li(href="#")
+									a(href="#") Виды грузоперевозок
+						
+					.d-none.d-md-block.col-md-2
+						.calc-btn
+							a(href="#") Рассчитать стоимость
+				
+					.col-8.col-md-3.col-xl-2.offset-xl-1
+						.contacts
+							+contactBlock([{link: "#", text:'8(800)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])
+					
+					.d-none.d-md-block.col-md-2
+						+pageBtn('button', 'Заказать звонок', 'page-btn--header')
+	.footer-copyright
+		.container
+			.footer-copyright-wrapper
+				.footer-copyright-col
+					p © NESCO 2020
+				.footer-copyright-col
+					a(href="#") Политика конфиденциальности

@@ -1,0 +1,176 @@
+.transportation {
+	.title-2 {
+		margin-bottom: 31px;
+	}
+
+	.section-block {
+		padding: 60px;
+
+		@media(max-width:1199px) {
+			padding: 45px;
+		}
+
+		@media(max-width:767px) {
+			padding: 15px;
+		}
+
+
+	}
+}
+
+.transportation-types-wrapper {
+	margin-bottom: 56px;
+}
+
+.transportation-types-item {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	margin-bottom: 24px;
+	max-width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 200px;
+
+	.btn-more {
+		display: none;
+		width: 150px;
+		height: 48px;
+		border: 2px solid rgba(47, 65, 186, .9);
+		box-sizing: border-box;
+		border-radius: 4px;
+		background-color: transparent;
+		font-weight: 700;
+		color: #2F41BA;
+		cursor: pointer;
+		transition: .5s;
+		outline: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		z-index: 10;
+		animation-name: showSlow;
+		animation-duration: 1s;
+
+	}
+
+	img {
+		border-radius: 10px;
+	}
+}
+
+.transportation-types-item:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(75%);
+	z-index: 5;
+	background: rgba(238, 242, 247, 1);
+	transition: .5s;
+}
+
+.transportation-types-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+
+	span {
+		margin-right: 6px;
+		animation-name: showSlow;
+		animation-duration: 1s;
+	}
+
+	h4 {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1;
+		transition: .5s;
+	}
+
+}
+
+.transportation-types-item:hover:after {
+	transform: translateY(0%);
+	background: rgba(238, 242, 247, .9);
+}
+
+.transportation-types-item:hover .btn-more {
+	display: block;
+}
+
+.transportation-types-item:hover .transportation-types-title span {
+	display: none;
+}
+
+.transportation-types-item:hover .transportation-types-title h4 {
+	transform: translateY(-100px);
+}
+
+.transportation-types-description {
+	display: none;
+	animation-name: showSlow;
+	animation-duration: 1.5s;
+
+	&.show {
+		display: block;
+	}
+
+	img {
+
+		margin-left: 30px;
+		border-radius: 10px;
+
+		@media(max-width: 1199px) {
+			margin-bottom: 20px;
+			margin-left: 25px;
+			max-width: 300px;
+
+		}
+
+		@media(max-width:767px) {
+			display: none;
+		}
+	}
+
+	.title-3 {
+		margin-bottom: 2em;
+	}
+}
+
+.transportation-duration-item {
+	max-width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	border-radius: 10px;
+	background: #FFFFFF;
+
+	border: 1px solid #2F41BA;
+	box-sizing: border-box;
+	border-radius: 7px;
+	height: 270px;
+
+
+	@media(max-width:767px) {
+		height: auto;
+		margin-bottom: 24px;
+	}
+
+	.card-num {
+		font-weight: 700;
+		font-size: 25px;
+		color: #2F41BA;
+		margin-bottom: 10px;
+	}
+}

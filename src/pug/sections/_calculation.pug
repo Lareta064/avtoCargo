@@ -11,9 +11,12 @@ section.calculation
 					.calc-form-column
 						.title-3
 							h3 Получите предложение на перевозку Вашего груза:
+						// поле ИМЯ
 						.form-group
 							input(type="text" name="userName" placeholder="Имя")
 							.error-notify !
+
+						// поле ТЕЛЕФОН
 						.form-group
 							input(type="tel" name="userPhone" placeholder="Телефон")
 							.error-notify !
@@ -23,6 +26,7 @@ section.calculation
 				.row
 					.col-md-6
 						.calc-form-column
+							//поле Откуда
 							.select-block.form-group
 								.error-notify !
 								i.fas.fa-angle-down.input-arrow
@@ -31,14 +35,18 @@ section.calculation
 									p.select-option(data-value='Москва') Москва
 									p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
 									p.select-option(data-value='Воронеж') Воронеж
+							
+							//поле Куда
 							.select-block.form-group
 								.error-notify !
 								i.fas.fa-angle-down.input-arrow
-								input(type="text" name="city_where " placeholder="Откуда"  value="").filters-form-input
+								input(type="text" name="city_where " placeholder="Куда"  value="").filters-form-input
 								.select-block-drop.hide
 									p.select-option(data-value='Москва') Москва
 									p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
 									p.select-option(data-value='Воронеж') Воронеж
+
+							//поля ВЕС и ОБЪЕМ
 							.form-group.form-group--half
 								.form-group-item
 									.error-notify !
@@ -46,6 +54,8 @@ section.calculation
 								.form-group-item
 									.error-notify !
 									input(type="text" name="volume" placeholder="Объем")
+
+							//поле ВИД ТРАНСПОРТА
 							.select-block.form-group
 								.error-notify !
 								i.fas.fa-angle-down.input-arrow
@@ -66,7 +76,7 @@ section.calculation
 						input(type="checkbox"  name="form_checkbox").form-checkbox
 						span.custom-checkbox
 						span.agree-politic Отправляя форму, Вы принимаете #[a(href="#") условия обработки] Ваших данных
-				button.page-btn.page-btn--send Отправить запрос
+				button.page-btn.page-btn--send(type="submit") Отправить запрос
 
 						
 

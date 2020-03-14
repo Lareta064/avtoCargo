@@ -196,15 +196,17 @@
 	.select-block-drop {
 		z-index: 10;
 		position: absolute;
+		position: relative;
 		width: 100%;
 		padding-top: 13px;
 		padding-bottom: 13px;
-		border: 1px solid @orange;
+		border: 1px solid rgba(176, 176, 176, .7);
 		border-top: 0px;
 		background-color: #FFF;
 		margin-top: -5px;
 		animation-name: showSlow;
 		animation-duration: .5s;
+		border-radius: 0 0 4px 4px;
 	}
 
 	.select-block-drop .select-option {

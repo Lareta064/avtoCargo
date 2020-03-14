@@ -12,7 +12,7 @@ $(document).ready(function () {
 			let optionsDrop = selectBlock[i].querySelector('.select-block-drop')
 			let arrowOpenDrop = selectBlock[i].querySelector('.input-arrow')
 
-			// console.log(e.target)
+
 			if (e.target == outInput || e.target == arrowOpenDrop) {
 				e.stopPropagation()
 
@@ -66,12 +66,10 @@ $(document).ready(function () {
 		});
 	}
 
-	/* при ресайзе экарна */
 
-	window.addEventListener('resize', function () { });
 
 	/* Показать скрытые Завершенные Проекты страница О Компании*/
-	// const completProjectsWrapper = document.querySelector('.project-cards');
+
 	const completProjectCard = document.querySelectorAll('.project-cards .card-item');
 	const btnMoreCards = document.querySelector('#moreProjects');
 
@@ -99,6 +97,7 @@ $(document).ready(function () {
 			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		}
 	});
+	/* слайдер Партнеры*/
 	$('.partners-slider').owlCarousel({
 		items: 1,
 		dots: false,
@@ -123,7 +122,7 @@ $(document).ready(function () {
 		}
 	})
 
-	/*  Toggle Tranportation-types */
+	/*  Показать описание соответсвующего типа перевозки страница Типы грузоперевозок */
 	const transportTypes = document.querySelectorAll('.transportation-types-item');
 	const transportTypesInfo = document.querySelectorAll('.transportation-types-description');
 
@@ -148,56 +147,27 @@ $(document).ready(function () {
 		}
 
 	}
-	/* FORM VALIDATE*/
-	// $('.calc-form').validate({
-	// 	rules: {
-	// 		userName: {
-	// 			required: true
-	// 		},
-	// 		userPhone: {
-	// 			required: true
-	// 		},
-	// 		city_from: {
-	// 			required: true
-	// 		},
-	// 		city_where: {
-	// 			required: true
-	// 		},
-	// 		wt: {
-	// 			required: true
-	// 		},
-	// 		volume: {
-	// 			required: true
-	// 		},
-	// 		carType: {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	messages: {
-	// 		userName: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		userPhone: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		city_from: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		city_where: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		wt: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		volume: {
-	// 			required: 'не заполнено'
-	// 		},
-	// 		carType: {
-	// 			required: 'не заполнено'
-	// 		}
 
-	// 	}
-	// })
+	/* ПОКАЗАТЬ ФОРМУ ИЗМЕНИТЬ МАРШРУТ  стр РАССЧИТАТЬ СТОИМОСТЬ*/
+	const formSelectPath = document.querySelector('.section-block--form');
+	const btnToggleformSelectPath = document.querySelector('#selectPathBtn');
 
+	if (btnToggleformSelectPath) {
+		btnToggleformSelectPath.addEventListener('click', function () {
+
+			if (formSelectPath.classList.contains('active')) {
+				this.classList.remove('active');
+				this.querySelector('.btn-icon').textContent = '+';
+				formSelectPath.classList.remove('active');
+			}
+			else {
+				this.classList.add('active');
+				this.querySelector('.btn-icon').textContent = '-';
+				formSelectPath.classList.add('active')
+			}
+
+		})
+
+	}
 
 })

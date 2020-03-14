@@ -1,0 +1,48 @@
+section.select-path
+	.container
+		+breadcrm(['Главная', 'Грузоперевозка Адыгейск - Нижний Новгород'] )
+		article.transportation-types
+			.title-2
+				h2 Грузоперевозка Адыгейск - Нижний Новгород
+			.select-path-form
+				.select-path-button#selectPathBtn
+					.btn-icon +
+					span Изменить маршрут
+				
+				.section-block.section-block--form
+					form(action="").calc-form
+						.row
+							.col-sm-6
+								//поле Откуда
+								.select-block.form-group
+									.error-notify !
+									i.fas.fa-angle-down.input-arrow
+									input(type="text" name="city_from "  value="" placeholder="Откуда").filters-form-input
+									.select-block-drop.hide
+										p.select-option(data-value='Москва') Москва
+										p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
+										p.select-option(data-value='Воронеж') Воронеж
+							.col-sm-6
+								//поле Куда
+								.select-block.form-group
+									.error-notify !
+									i.fas.fa-angle-down.input-arrow
+									input(type="text" name="city_where " placeholder="Куда"  value="").filters-form-input
+									.select-block-drop.hide
+										p.select-option(data-value='Москва') Москва
+										p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
+										p.select-option(data-value='Воронеж') Воронеж
+							
+							.col-sm-6
+								button.page-btn.page-btn--send.w-100(type="submit") Рассчитать
+
+section.path-map
+	.container
+		.row
+			.col-md-6
+				.map-wrapper
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2c11088eeb43aaee6abaa20dabb14dc67db4e1b6263b38a7677a89cef7b89a17&amp;lang=ru_RU&amp;scroll=true")
+			.col-md-6.col-lg-6
+				.path-info
+					p Адыгейск 
+					p Нижний Новгород

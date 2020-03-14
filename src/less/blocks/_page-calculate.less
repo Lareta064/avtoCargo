@@ -1,0 +1,116 @@
+/* СТРАНИЦА РАСЧЕТ СТОИМОСТИ*/
+.section-block--form {
+	padding: 30px;
+	display: none;
+	animation-name: showSlow;
+	animation-duration: 1.5s;
+
+	&.active {
+		display: block;
+	}
+
+	.page-btn {
+		margin-top: 15px;
+	}
+}
+
+.select-path {
+	padding-top: 30px;
+
+	.title-2 h2 {
+		margin-bottom: 30px;
+	}
+}
+
+.select-path-button {
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	.btn-icon {
+		width: 20px;
+		height: 20px;
+		color: #fff;
+		font-size: 20px;
+		border-radius: 2px;
+		background: @orange;
+		line-height: 1;
+		font-weight: 700;
+		text-align: center;
+		margin-right: 10px;
+	}
+
+	span {
+		font-size: 14px;
+	}
+
+	color: @orange;
+
+}
+
+.select-path-button.active {
+	.btn-icon {
+		background: #2F41BA;
+	}
+
+	.btn-icon {
+		font-size: 22px;
+		line-height: .8;
+	}
+
+	color: #2F41BA;
+}
+
+.map-wrapper {
+	height: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.path-map {
+	.path-info {
+		position: relative;
+		padding-left: 50px;
+
+
+		p {
+			font-size: 25px;
+			font-weight: 700;
+			position: relative;
+			padding-left: 30px;
+		}
+
+		p:first-child {
+			margin-bottom: 50px;
+		}
+	}
+
+	.path-info p:before {
+		content: '';
+		position: absolute;
+		left: -9px;
+		top: 4px;
+		background-image: url(../img/icons/place.png);
+		width: 20px;
+		height: 28px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.path-info:before {
+		content: '';
+		position: absolute;
+		width: 2px;
+		top: 33px;
+		bottom: 31px;
+		background-image: url(../img/icons/line.png);
+		opacity: .8;
+
+	}
+
+}

@@ -97,5 +97,46 @@ $(document).ready(function () {
       preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
     }
   });
+  $('.partners-slider').owlCarousel({
+    items: 1,
+    dots: false,
+    loop: true,
+    autoplaySpeed: 800,
+    autoplay: true,
+    nav: true,
+    navSpeed: 500,
+    navText: ['<span class="slider-arrow slider-arrow-left">	&larr;</span>', '<span class="slider-arrow slider-arrow-right">&rarr;</span>'],
 
+    responsive: {
+
+      580: {
+        items: 2
+      },
+      992: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    }
+  })
+
+  //   $('.header-slider ').slick({
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     centerMode: true,
+  //     variableWidth: true,
+  //     arrows: false,
+  //     dots: true,
+  //     infinite: true,
+  //     autoplay: true,
+  //     autoplaySpeed: 900,
+
+  //     responsive: [{
+  //         breakpoint: 1023,
+  //         settings: {
+  //             // dots: false
+  //         }
+  //     }]
+  // });
 })

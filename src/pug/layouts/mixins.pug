@@ -1,18 +1,18 @@
 mixin navigation(dataObj)
 	.nav-content&attributes(attributes)
 		.logo
-			a(href="#")
+			a(href="index.html")
 				img(src="img/logo.png", alt="logo")
 		button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
 			span toggle menu
 		.header-nav
 			ul
 				li(href="#")
-					a(href="#") О компании
+					a(href="about.html") О компании
 				li(href="#")
-					a(href="#") Виды грузоперевозок
+					a(href="transportation-types.html") Виды грузоперевозок
 				li(href="#")
-					a(href="#") Рассчитать стоимость
+					a(href="calculate.html") Рассчитать стоимость
 	
 	.contacts
 		+contactBlock([{link: "#", text:'+7(999)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])
@@ -24,7 +24,7 @@ mixin header(addClass)
 		.container
 			.navigation-content
 				.logo
-					a(href="#")
+					a(href="index.html")
 						img(src="img/logo.png", alt="logo")
 				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
 					span toggle menu
@@ -33,9 +33,9 @@ mixin header(addClass)
 						li
 							a(href="about.html") О компании
 						li
-							a(href="#") Виды грузоперевозок
+							a(href="transportation-types.html") Виды грузоперевозок
 						li
-							a(href="#") Рассчитать стоимость
+							a(href="calculate.html") Рассчитать стоимость
 				
 				.contacts
 					+contactBlock([{link: "#", text:'+7(999)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])

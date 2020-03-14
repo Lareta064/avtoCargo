@@ -148,7 +148,56 @@ $(document).ready(function () {
 		}
 
 	}
+	/* FORM VALIDATE*/
+	// $('.calc-form').validate({
+	// 	rules: {
+	// 		userName: {
+	// 			required: true
+	// 		},
+	// 		userPhone: {
+	// 			required: true
+	// 		},
+	// 		city_from: {
+	// 			required: true
+	// 		},
+	// 		city_where: {
+	// 			required: true
+	// 		},
+	// 		wt: {
+	// 			required: true
+	// 		},
+	// 		volume: {
+	// 			required: true
+	// 		},
+	// 		carType: {
+	// 			required: true
+	// 		}
+	// 	},
+	// 	messages: {
+	// 		userName: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		userPhone: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		city_from: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		city_where: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		wt: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		volume: {
+	// 			required: 'не заполнено'
+	// 		},
+	// 		carType: {
+	// 			required: 'не заполнено'
+	// 		}
 
+	// 	}
+	// })
 
 
 })

@@ -1,16 +1,4 @@
-
 $(document).ready(function () {
-
-  //анимация svg
-  const icon1 = new Vivus('icon1', {
-    duration: 300
-  });
-  const icon2 = new Vivus('icon2', {
-    duration: 200
-  });
-  const icon3 = new Vivus('icon3', {
-    duration: 200
-  });
 
   /*выбор селекта в форме*/
   const selectBlock = document.querySelectorAll('.select-block')
@@ -64,10 +52,8 @@ $(document).ready(function () {
     })
   }
 
-  /*показать часть формы*/
+  /*показать скрытую часть формы Рассчитать стоимость*/
   const showFormBtn = document.querySelectorAll('.show-fields');
-  //const showFormBtnMobile = document.querySelectorAll('.show-fields--mob');
-  //const showFormBtnDesktop = document.querySelectorAll('.show-fields--desk');
   const formPart = document.querySelector('#form-part');
 
   for (let i = 0; i < showFormBtn.length; i++) {
@@ -81,11 +67,35 @@ $(document).ready(function () {
   }
 
   /* при ресайзе экарна */
-  const RESIZE_SETPOINT = 768;
-  let prevWidth = window.innerWidth;
-  let setpointTriggered = false;
 
-  window.addEventListener('resize', function () {
-  })
+  window.addEventListener('resize', function () {});
+
+  /* Показать скрытые Завершенные Проекты страница О Компании*/
+  const completProjectsWrapper = document.querySelector('.project-cards');
+  const completProjectCard = completProjectsWrapper.querySelectorAll('.card-item');
+  const btnMoreCards = document.querySelector('#moreProjects');
+
+  if (btnMoreCards) {
+    btnMoreCards.addEventListener('click', function () {
+
+      this.classList.add('hide');
+      for (let card of completProjectCard) {
+
+        card.classList.remove('hide');
+      }
+    })
+  }
+  /* Галерея работ */
+  //magnifyk
+  $(".card-item").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    }
+  });
 
 })

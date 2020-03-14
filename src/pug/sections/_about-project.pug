@@ -1,0 +1,21 @@
+mixin cardItem(src, addClass)
+	.col-sm-6.col-lg-4
+		.card-item(class=" "+ addClass)
+			a(href="img/projects/"+ src+".jpg")
+				img(src="img/projects/"+ src+".jpg", alt="photo")
+			span.card-icon.fas.fa-search-plus
+section.completed-project
+	.container
+		.title-3
+			h3 Предлагаем ознакомиться с некоторыми завершенными проектами:
+		.project-cards
+			.row
+				+cardItem(2)
+				+cardItem(3)
+				+cardItem(4)
+				+cardItem(2, 'hide')
+				+cardItem(3, 'hide')
+				+cardItem(4, 'hide')
+						
+			.button--light.text-center
+				button#moreProjects Смотреть все проекты

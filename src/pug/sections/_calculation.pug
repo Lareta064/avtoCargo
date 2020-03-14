@@ -13,8 +13,10 @@ section.calculation
 							h3 Получите предложение на перевозку Вашего груза:
 						.form-group
 							input(type="text" name="userName" placeholder="Имя")
+							.error-notify !
 						.form-group
 							input(type="tel" name="userPhone" placeholder="Телефон")
+							.error-notify !
 							a(href="#!").show-fields.show-fields--mob Рассчитать стоимость	
 						
 			#form-part.hide
@@ -22,6 +24,7 @@ section.calculation
 					.col-md-6
 						.calc-form-column
 							.select-block.form-group
+								.error-notify !
 								i.fas.fa-angle-down.input-arrow
 								input(type="text" name=" "  value="" placeholder="Откуда").filters-form-input
 								.select-block-drop.hide
@@ -29,6 +32,7 @@ section.calculation
 									p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
 									p.select-option(data-value='Воронеж') Воронеж
 							.select-block.form-group
+								.error-notify !
 								i.fas.fa-angle-down.input-arrow
 								input(type="text" name=" " placeholder="Откуда"  value="").filters-form-input
 								.select-block-drop.hide
@@ -36,9 +40,14 @@ section.calculation
 									p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
 									p.select-option(data-value='Воронеж') Воронеж
 							.form-group.form-group--half
-								input(type="text" name="wt" placeholder="Вес")
-								input(type="text" name="volume" placeholder="Объем")
+								.form-group-item
+									.error-notify !
+									input(type="text" name="wt" placeholder="Вес")
+								.form-group-item
+									.error-notify !
+									input(type="text" name="volume" placeholder="Объем")
 							.select-block.form-group
+								.error-notify !
 								i.fas.fa-angle-down.input-arrow
 								input(type="text" name="carType"  placeholder="Требуемый транспорт" value="").filters-form-input
 								.select-block-drop.hide
@@ -50,8 +59,13 @@ section.calculation
 						.calc-form-column
 							.form-group
 								textarea(name="message"  placeholder="Сообщение")
+								.error-notify !
 			.form-btn
-				p.agree-politic Отправляя форму, Вы принимаете #[a(href="#") условия обработки] Ваших данных
+				.checkbox-group
+					label.form-label
+						input(type="checkbox"  name="form-checkbox").form-checkbox
+						span.custom-checkbox
+						span.agree-politic Отправляя форму, Вы принимаете #[a(href="#") условия обработки] Ваших данных
 				button.page-btn.page-btn--send Отправить запрос
 
 						

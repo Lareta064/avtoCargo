@@ -32,7 +32,11 @@
 	max-width: 360px;
 	margin-left: auto;
 	margin-right: auto;
-	min-height: 200px;
+	min-height: auto;
+
+	@media(max-width:767px) {
+		min-height: 200px;
+	}
 
 	.btn-more {
 		display: none;

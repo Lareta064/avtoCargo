@@ -1,0 +1,311 @@
+
+<!-- contact item--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Рассчитать стоимость</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/MagnificPopup/dist/magnific-popup.css">
+    <script src="https://use.fontawesome.com/f80c99f7fb.js"> </script>
+    <link src="fonts/opensans/opensans.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="libs/owlCarousel2/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="header  ">
+      <div class="container">
+        <div class="navigation-content">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"/></a></div>
+          <button class="cmn-toggle-switch cmn-toggle-switch__htx" id="nav-menu-toggle"><span>toggle menu</span></button>
+          <div class="header-nav">
+            <ul>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="transportation-types.html">Виды грузоперевозок</a></li>
+              <li><a href="calculate.html">Рассчитать стоимость</a></li>
+            </ul>
+          </div>
+          <div class="contacts">
+            <nav class="contacts-list"><a class="contact-list__item contact-phone" href=" #"><span class="contact-list__icon"><i class=" fas fa-phone-alt"></i></span><span>+7(999)999-99-99</span></a><a class="contact-list__item contact-phone" href=" #"><span class="contact-list__icon"><i class=" fas fa-envelope"></i></span><span>info@mail.com</span></a>
+            </nav>
+          </div>
+          <button class="page-btn  page-btn--header">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+    <section class="select-path">
+      <div class="container">
+        <div class="breadcrumbs"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Грузоперевозка Адыгейск - Нижний Новгород</a>
+        </div>
+        <article class="transportation-types">
+          <div class="title-2">
+            <h2>Грузоперевозка Адыгейск - Нижний Новгород</h2>
+          </div>
+          <div class="select-path-form">
+            <div class="select-path-button" id="selectPathBtn">
+              <div class="btn-icon">+</div><span>Изменить маршрут</span>
+            </div>
+            <div class="section-block section-block--form">
+              <form class="calc-form" action="">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <!--поле Откуда-->
+                    <div class="select-block form-group">
+                      <div class="error-notify">!</div><i class="fas fa-angle-down input-arrow"></i>
+                      <input class="filters-form-input" type="text" name="city_from " value="" placeholder="Откуда">
+                      <div class="select-block-drop hide">
+                        <p class="select-option" data-value="Москва">Москва</p>
+                        <p class="select-option" data-value="Санкт-Петербург">Санкт-Петербург</p>
+                        <p class="select-option" data-value="Воронеж">Воронеж</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <!--поле Куда-->
+                    <div class="select-block form-group">
+                      <div class="error-notify">!</div><i class="fas fa-angle-down input-arrow"></i>
+                      <input class="filters-form-input" type="text" name="city_where " placeholder="Куда" value="">
+                      <div class="select-block-drop hide">
+                        <p class="select-option" data-value="Москва">Москва</p>
+                        <p class="select-option" data-value="Санкт-Петербург">Санкт-Петербург</p>
+                        <p class="select-option" data-value="Воронеж">Воронеж</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="page-btn page-btn--send w-100" type="submit">Рассчитать</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="path-map">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="map-wrapper">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2c11088eeb43aaee6abaa20dabb14dc67db4e1b6263b38a7677a89cef7b89a17&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="path-info">
+              <div class="path-info-city">
+                <p>Адыгейск </p>
+                <p>Нижний Новгород</p>
+              </div>
+              <div class="path-info-details">
+                <div class="details-item"><span>Расстояние</span><span>1575 км.</span></div>
+                <div class="details-item"><span>Время доставки:</span><span>17 ч. 53 мин.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="best-condition">
+          <div class="title-3">
+            <h3>Лучшие условия на превозку грузов по вашему направлению:</h3>
+          </div>
+          <ul>
+            <li>Перевозки габаритных грузов </li>
+            <li>Перевозки в рефрижераторах </li>
+            <li>Перевозки сборных грузов</li>
+          </ul>
+        </article>
+        <article class="custom-price">
+          <div class="title-3">
+            <h3>Цены на грузоперевозку Адыгейск - Нижний Новгород, <span class="details-info">при полной загрузке:</span> </h3>
+          </div>
+          <div class="custom-price-table">
+            <div class="custom-price-table__col">
+              <div class="custom-price-title">
+                <p>Тентованная фура</p>
+              </div>
+              <div class="custom-price-val">
+                <p>15 452 руб. *</p>
+              </div>
+            </div>
+            <div class="custom-price-table__col">
+              <div class="custom-price-title">
+                <p>Рефрижиратор</p>
+              </div>
+              <div class="custom-price-val">
+                <p>23 652 руб. * </p>
+              </div>
+            </div>
+            <div class="custom-price-table__col">
+              <div class="custom-price-title">
+                <p> Трал низкорамный</p>
+              </div>
+              <div class="custom-price-val">
+                <p>41 652 руб. *</p>
+              </div>
+            </div>
+          </div>
+          <div class="custom-price-table__note">
+            <p>* указанная стоимость перевозки является минимальной и может быть изменена после уточнения всех нюансов нашими специалистами.</p>
+          </div>
+        </article>
+        <article class="custom-characteristic">
+          <div class="title-3">
+            <h3>Особенности грузоперевозки по маршруту Адыгейск - Нижний Новгород:</h3>
+          </div>
+          <div class="custom-characteristic__text basic-text">
+            <p>На территории нашей страны действуют строгие ограничения на провоз по местным и федеральным трассам грузов, вес которых превышает 40 тонн, длина 20, ширина 2,5, а высота 4 метра (с учетом автопоезда). Объекты, чьи массогабаритные параметры выходят за рамки указанных характеристик, можно транспортировать, только получив специальное разрешение на негабаритные перевозки. Зачастую перевозки негабарита сопровождаются машиной прикрытия, оборудованной проблесковыми маячками и специальными цветографическими схемами и знаками. Для некоторых грузов требуется разработка «спец. маршрута», согласование которого может достигать до нескольких месяцев. </p>
+            <p>Наша компания высоко ценит надежность и гарантии сохранности груза. Поэтому мы страхуем все перевозимые грузы, независимо от степени риска. Страховой полис включен в стоимость наших услуг. Специалисты компании берут на себя обязательства обеспечить перевозку всеми необходимыми документами и не допустить простоя по этой причине. В процессе согласования наши специалисты тщательно прорабатывают маршрут с учётом локальных требований по максимальной нагрузке на дорожное полотно по пути следования. Благодаря этому риск задержек в пути и нарушения сроков доставки сводится к нулю. </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="calculation">
+      <div class="container">
+        <form class="calc-form" action="" method="POST">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="calc-form-column">
+                <div class="calc-form-img"><img src="img/index/2.jpg" alt="img"><a class="show-fields" href="#!">Рассчитать стоимость</a></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="calc-form-column">
+                <div class="title-3">
+                  <h3>Получите предложение на перевозку Вашего груза:</h3>
+                </div>
+                <!-- поле ИМЯ-->
+                <div class="form-group">
+                  <input type="text" name="userName" placeholder="Имя">
+                  <div class="error-notify">!</div>
+                </div>
+                <!-- поле ТЕЛЕФОН-->
+                <div class="form-group">
+                  <input type="tel" name="userPhone" placeholder="Телефон">
+                  <div class="error-notify">!</div><a class="show-fields show-fields--mob" href="#!">Рассчитать стоимость	</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hide" id="form-part">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="calc-form-column">
+                  <!--поле Откуда-->
+                  <div class="select-block form-group">
+                    <div class="error-notify">!</div><i class="fas fa-angle-down input-arrow"></i>
+                    <input class="filters-form-input" type="text" name="city_from " value="" placeholder="Откуда">
+                    <div class="select-block-drop hide">
+                      <p class="select-option" data-value="Москва">Москва</p>
+                      <p class="select-option" data-value="Санкт-Петербург">Санкт-Петербург</p>
+                      <p class="select-option" data-value="Воронеж">Воронеж</p>
+                    </div>
+                  </div>
+                  <!--поле Куда-->
+                  <div class="select-block form-group">
+                    <div class="error-notify">!</div><i class="fas fa-angle-down input-arrow"></i>
+                    <input class="filters-form-input" type="text" name="city_where " placeholder="Куда" value="">
+                    <div class="select-block-drop hide">
+                      <p class="select-option" data-value="Москва">Москва</p>
+                      <p class="select-option" data-value="Санкт-Петербург">Санкт-Петербург</p>
+                      <p class="select-option" data-value="Воронеж">Воронеж</p>
+                    </div>
+                  </div>
+                  <!--поля ВЕС и ОБЪЕМ-->
+                  <div class="form-group form-group--half">
+                    <div class="form-group-item">
+                      <div class="error-notify">!</div>
+                      <input type="text" name="wt" placeholder="Вес">
+                    </div>
+                    <div class="form-group-item">
+                      <div class="error-notify">!</div>
+                      <input type="text" name="volume" placeholder="Объем">
+                    </div>
+                  </div>
+                  <!--поле ВИД ТРАНСПОРТА-->
+                  <div class="select-block form-group">
+                    <div class="error-notify">!</div><i class="fas fa-angle-down input-arrow"></i>
+                    <input class="filters-form-input" type="text" name="carType" placeholder="Требуемый транспорт" value="">
+                    <div class="select-block-drop hide">
+                      <p class="select-option" data-value="Газель">Газель</p>
+                      <p class="select-option" data-value="Камаз 10т">Камаз 10т</p>
+                      <p class="select-option" data-value="Камаз 20т">Камаз 20т</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="calc-form-column">
+                  <div class="form-group">
+                    <textarea name="message" placeholder="Сообщение"></textarea>
+                    <div class="error-notify">!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-btn">
+            <div class="checkbox-group">
+              <label class="form-label">
+                <input class="form-checkbox" type="checkbox" name="form_checkbox"><span class="custom-checkbox"></span><span class="agree-politic">Отправляя форму, Вы принимаете <a href="#">условия обработки</a> Ваших данных</span>
+              </label>
+            </div>
+            <button class="page-btn page-btn--send" type="submit">Отправить запрос</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="navigation-content">
+            <div class="row">
+              <div class="col-4 col-md-2">
+                <div class="logo"><a href="index.html"><img src="img/logo2.png" alt="logo"></a></div>
+              </div>
+              <div class="d-none d-md-block col-md-3 col-xl-2 offset-xl-1">
+                <div class="footer-nav">
+                  <ul>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="transportation-types.html">Виды грузоперевозок</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-none d-md-block col-md-2">
+                <div class="calc-btn"><a href="calculate.html">Рассчитать стоимость</a></div>
+              </div>
+              <div class="col-8 col-md-3 col-xl-2 offset-xl-1">
+                <div class="contacts">
+                  <nav class="contacts-list"><a class="contact-list__item contact-phone" href=" #"><span class="contact-list__icon"><i class=" fas fa-phone-alt"></i></span><span>8(800)999-99-99</span></a><a class="contact-list__item contact-phone" href=" #"><span class="contact-list__icon"><i class=" fas fa-envelope"></i></span><span>info@mail.com</span></a>
+                  </nav>
+                </div>
+              </div>
+              <div class="d-none d-md-block col-md-2">
+                <button class="page-btn  page-btn--header">Заказать звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="footer-copyright-wrapper">
+            <div class="footer-copyright-col">
+              <p>© NESCO 2020</p>
+            </div>
+            <div class="footer-copyright-col"><a href="#">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/MagnificPopup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="libs/owlCarousel2/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/82e9f58f04.js"></script>
+    <script src="js/gamburger.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

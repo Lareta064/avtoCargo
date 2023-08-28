@@ -75,3 +75,48 @@
 	color: #9D9D9D;
 	font-size: 12px;
 }
+
+.modal .modal-dialog {
+	max-width: 530px;
+}
+
+#transportationForm .modal-dialog {
+	max-width: 920px;
+
+	.page-btn {
+		width: 50%;
+
+		@media(max-width:767px) {
+			width: 100%;
+		}
+	}
+}
+
+.modal .modal-content {
+	padding: 80px;
+
+	@media(max-width:767px) {
+		padding: 40px;
+	}
+
+	@media(max-width:580px) {
+		padding: 20px;
+	}
+
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		outline: none;
+	}
+
+	.modal-form-title {
+		margin-bottom: 45px;
+
+		h5 {
+			font-size: 25px;
+			font-weight: 700;
+		}
+
+	}
+}

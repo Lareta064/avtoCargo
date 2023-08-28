@@ -7,18 +7,18 @@ mixin navigation(dataObj)
 			span toggle menu
 		.header-nav
 			ul
-				li(href="#")
+				li
 					a(href="about.html") О компании
-				li(href="#")
+				li
 					a(href="transportation-types.html") Виды грузоперевозок
-				li(href="#")
+				li
 					a(href="calculate.html") Рассчитать стоимость
-	
+
 	.contacts
 		+contactBlock([{link: "#", text:'+7(999)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])
-		
+
 	+pageBtn('button', 'Заказать звонок', 'page-btn--header')
-	
+
 mixin header(addClass)
 	.header(class=" "+ addClass)
 		.container
@@ -36,23 +36,23 @@ mixin header(addClass)
 							a(href="transportation-types.html") Виды грузоперевозок
 						li
 							a(href="calculate.html") Рассчитать стоимость
-				
+
 				.contacts
 					+contactBlock([{link: "#", text:'+7(999)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])
-					
-				+pageBtn('button', 'Заказать звонок', 'page-btn--header')
+
+				+pageBtn('button', 'Заказать звонок', 'page-btn--header')(data-toggle="modal" data-target="#callForm")
 mixin pageBtn(tag, text, addClass, link)
 	if tag =='a'
-		#{tag}.page-btn(class=" "+addClass href = link) #{text}
+		#{tag}.page-btn(class=" "+addClass href = link)&attributes(attributes) #{text}
 	else
-		#{tag}.page-btn(class=" "+addClass) #{text}
+		#{tag}.page-btn(class=" "+addClass)&attributes(attributes) #{text}
 
 // contact item
 mixin contactBlock(items)
 	nav.contacts-list
 		each item in items
 			if item.link
-				a(href=" "+item.link).contact-list__item.contact-phone
+				a(href=" "+ item.link).contact-list__item.contact-phone
 					span.contact-list__icon
 						i(class=" "+ item.iconClass)
 					span #{item.text}

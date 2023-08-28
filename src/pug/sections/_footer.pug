@@ -25,7 +25,7 @@ footer.footer
 							+contactBlock([{link: "#", text:'8(800)999-99-99', iconClass: 'fas fa-phone-alt'}, {link: "#", text:'info@mail.com', iconClass: 'fas fa-envelope'}])
 					
 					.d-none.d-md-block.col-md-2
-						+pageBtn('button', 'Заказать звонок', 'page-btn--header')
+						+pageBtn('button', 'Заказать звонок', 'page-btn--header')(data-toggle="modal" data-target="#callForm")
 	.footer-copyright
 		.container
 			.footer-copyright-wrapper
@@ -33,3 +33,116 @@ footer.footer
 					p © NESCO 2020
 				.footer-copyright-col
 					a(href="#") Политика конфиденциальности
+
+//Модалка ЗАКАЗАТЬ ЗВОНОК
+#callForm.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			
+			.modal-form-title
+				h5.modal-title.text-center Заказать звонок
+					
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") ×
+			.modal-body
+				form(action="").calc-form
+					input(type="hidden" name="form_type" value="Заказать звонок")
+					.form-group
+						input(type="text" name="userName" placeholder="Имя")
+						.error-notify !
+					
+					.form-group
+						input(type="tel" name="userPhone" placeholder="Телефон")
+						.error-notify !
+					.form-btn
+						.checkbox-group
+							label.form-label
+								input(type="checkbox"  name="form_checkbox").form-checkbox
+								span.custom-checkbox
+								span.agree-politic Принимаю #[a(href="#") условия обработки] моих данных
+						button.page-btn.page-btn--send(type="submit") Отправить запрос
+
+//Модалка ЗАКАЗАТЬ ПЕРЕВОЗКУ
+#transportationForm.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			
+			.modal-form-title
+				h5.modal-title.text-center Заказать перевозку груза
+					
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") ×
+			.modal-body
+				form(action="").calc-form
+					input(type="hidden" name="form_type" value="Заказать перевозку")
+					.row
+						.col-md-6
+							.calc-form-column
+								// поле ИМЯ
+								.form-group
+									input(type="text" name="userName" placeholder="Имя")
+									.error-notify !
+
+								// поле ТЕЛЕФОН
+								.form-group
+									input(type="tel" name="userPhone" placeholder="Телефон")
+									.error-notify !								
+								
+					
+					
+						.col-md-6
+							.calc-form-column
+								//поле Откуда
+								.select-block.form-group
+									.error-notify !
+									i.fas.fa-angle-down.input-arrow
+									input(type="text" name="city_from "  value="" placeholder="Откуда").filters-form-input
+									.select-block-drop.hide
+										p.select-option(data-value='Москва') Москва
+										p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
+										p.select-option(data-value='Воронеж') Воронеж
+								
+								//поле Куда
+								.select-block.form-group
+									.error-notify !
+									i.fas.fa-angle-down.input-arrow
+									input(type="text" name="city_where " placeholder="Куда"  value="").filters-form-input
+									.select-block-drop.hide
+										p.select-option(data-value='Москва') Москва
+										p.select-option(data-value='Санкт-Петербург') Санкт-Петербург
+										p.select-option(data-value='Воронеж') Воронеж
+						.col-md-6
+							.calc-form-column
+								//поля ВЕС и ОБЪЕМ
+								.form-group.form-group--half
+									.form-group-item
+										.error-notify !
+										input(type="text" name="wt" placeholder="Вес")
+									.form-group-item
+										.error-notify !
+										input(type="text" name="volume" placeholder="Объем")
+
+								//поле ВИД ТРАНСПОРТА
+								.select-block.form-group
+									.error-notify !
+									i.fas.fa-angle-down.input-arrow
+									input(type="text" name="carType"  placeholder="Требуемый транспорт" value="").filters-form-input
+									.select-block-drop.hide
+										p.select-option(data-value='Газель') Газель
+										p.select-option(data-value='Камаз 10т') Камаз 10т
+										p.select-option(data-value='Камаз 20т') Камаз 20т
+												
+						.col-md-6
+							.calc-form-column
+								.form-group
+									textarea(name="message"  placeholder="Сообщение")
+									.error-notify !
+						.col-md-6
+							.form-btn
+								button.page-btn.page-btn--send(type="submit") Отправить
+						.col-md-6
+							.checkbox-group
+								label.form-label
+									input(type="checkbox"  name="form_checkbox").form-checkbox
+									span.custom-checkbox
+									span.agree-politic Принимаю #[a(href="#") условия обработки] моих данных

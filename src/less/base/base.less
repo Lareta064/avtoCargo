@@ -17,6 +17,7 @@ body {
 	font-size: 14px;
 	line-height: 1.4;
 	min-width: 375px;
+	-webkit-text-size-adjust: none;
 
 
 }
@@ -44,6 +45,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
 	padding: 0;
 	margin: 0;
@@ -53,8 +55,9 @@ img {
 	max-width: 100%
 }
 
+button,
 input {
-	outline: none;
+	outline: none !important;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -183,10 +186,14 @@ a.contact-list__item:hover {
 }
 
 .contact-list__icon {
-	font-size: 16px;
-	color: @orange;
+	// font-size: 16px;
+	// color: @orange;
 	display: inline-block;
 	width: 16px;
+	height: 16px;
+	background-image: url(../img/phone.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
 	display: flex;
 	-webkit-justify-content: center;
 	justify-content: center;
